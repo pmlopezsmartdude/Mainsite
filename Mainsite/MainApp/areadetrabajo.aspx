@@ -6,7 +6,7 @@
 </head>
 <body>
 <form id="form2" runat="server">
-<div class="content-wrapper">
+<div class="content-wrapper1">
     <asp:Label ID="Label1" runat="server" Text="Area de trabajo" 
         Font-Names="Century Gothic"></asp:Label>
 </div>
