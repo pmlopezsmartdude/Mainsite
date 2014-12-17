@@ -71,7 +71,7 @@
         <div class="header1">
  
         </div>
-        <div class="main">
+        <div class="main" style="display:block; width:100%; border:none; margin:0; padding:0; height:100%;">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
         </div>
         <div class="clear">

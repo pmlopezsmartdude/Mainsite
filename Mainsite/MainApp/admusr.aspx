@@ -2,6 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <iframe id="menuadmusr" runat="server" src="menuadmusr.aspx" width="200px" height="480px"></iframe>
-<iframe id="workingarea" name="workingarea" src="areadetrabajo.aspx" runat="server" height="480px" width="739px"></iframe>
+    <iframe id="menuadmusr" runat="server" src="menuadmusr.aspx" style="display:block; width:100%; border:none; margin:0; padding:0; height:100%;" ></iframe>
+<iframe id="workingarea" name="workingarea" src="areadetrabajo.aspx" runat="server" style="display:block; width:100%; border:none; margin:0; padding:0 height:100%;" ></iframe>
 </asp:Content>

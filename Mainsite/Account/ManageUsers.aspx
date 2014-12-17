@@ -17,7 +17,7 @@
         Font-Names="Century Gothic" Font-Size="Small">
 <asp:TabPanel runat="server" HeaderText="Usuarios" ID="Tapanel1" Enabled="true" Font-Names="Century Gothic" Font-Size="X-Small">
 <ContentTemplate>
-<asp:Table ID="Usuarios" runat="server" Width="768px" Height="430px" Font-Names="Century Gothic" Font-Size="X-Small" BackColor="#CCCCCC">
+<asp:Table ID="Usuarios" runat="server" style="display:block; width:100%; border:none; margin:0; padding:0; height:100%;" width="768px" Height="430px" Font-Names="Century Gothic" Font-Size="X-Small" BackColor="#CCCCCC">
 <asp:TableRow>
 <asp:TableCell>
     <asp:GridView ID="UserGrid" runat="server" DataSourceID="UserDataSource" AllowPaging="true" CellPadding="4" ForeColor="#333333" GridLines="None"
@@ -60,10 +60,10 @@
             style="margin-left: 11px" />
         </div>
     </div>
-    <asp:Panel ID="DivManagePass" runat="server" BackColor="White">
+    <asp:Panel ID="DivManagePass" runat="server" BackColor="White" >
 
 
-     <div id="CambioContrasena" width="600px" height="55px" style="border: 2px solid black;">
+     <div id="CambioContrasena"  style="width:600px; height:55px; border: 2px solid black;">
 
         <fieldset class="changePassword">
          <legend>Modificar contraseña</legend>
@@ -111,12 +111,12 @@
      <div id="popupcontainer" style="width:620px;  border: 2px solid black;">
 
         <fieldset class="changePassword">
-          <legend>Administrar usuario de sistema</legend><table width="580px" border="0" align="center"><tr>
+          <legend>Administrar usuario de sistema</legend><table style="width:580px; border:0; text-align:center;"><tr>
     <td colspan="4"></td>
   </tr>
   <tr>
-    <td height="24" colspan="3"><asp:Label ID="label5" runat="server" Text="Información del usuario" /></td>
-    <td width="90"><asp:Label ID="label6" runat="server" Text="Roles" /></td>
+    <td style="height:24;" colspan="3"><asp:Label ID="label5" runat="server" Text="Información del usuario" /></td>
+    <td style="width:90;"><asp:Label ID="label6" runat="server" Text="Roles" /></td>
   </tr>
   <tr>
     <td class="style1"><asp:Label ID="label7" runat="server" Text="User ID" /></td><td colspan="2"><asp:TextBox runat="server" Enabled="false" ID="UserNameText" /></td><td rowspan="3"> <div id="roleDiv" runat="server"/></td></tr><tr>
