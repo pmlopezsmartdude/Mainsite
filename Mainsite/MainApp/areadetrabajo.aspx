@@ -7,7 +7,7 @@
 <body>
 <form id="form2" runat="server">
 <div class="content-wrapper1">
-    <asp:Label ID="Label1" runat="server" Text="Area de trabajo" 
+    <asp:Label ID="Label1" runat="server" Text="Area de trabajo principal, por favor escoja aplicación habilitada en menu lateral izquierdo." 
         Font-Names="Century Gothic"></asp:Label>
 </div>
 </form>

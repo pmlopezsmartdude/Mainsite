@@ -27,11 +27,11 @@
         Para obtener más información acerca de White Cloud Technologies, visite <a href="http://www.wct.cl" title="Sitio web de White Cloud Technologies por WTC Consultores">www.wct.cl</a>
     </p>
     <p> 
-        <asp:Table ID="TableApps" runat="server">
-        <asp:TableRow>
-        <asp:TableCell><asp:HyperLink runat="server" ID="admuserlnk" NavigateUrl="~/MainApp/admusr.aspx" Text="Administración de usuarios" ImageUrl="~/Images/Admusuarios.png"></asp:HyperLink><br />
-        Administración de usuaros y Roles.</asp:TableCell>
-        <asp:TableCell></asp:TableCell><asp:TableCell></asp:TableCell>
+        <asp:Table ID="TableApps" runat="server" HorizontalAlign="Center">
+        <asp:TableRow HorizontalAlign="Center">
+        <asp:TableCell style="text-align:center;" HorizontalAlign="Center"><asp:HyperLink runat="server" ID="admuserlnk" NavigateUrl="~/MainApp/admusr.aspx" Text="Espacio de trabajo" ImageUrl="~/Images/Admusuarios.png"></asp:HyperLink><br />
+        Espacio de Trabajo.</asp:TableCell>
+        
         </asp:TableRow>
         </asp:Table>
 

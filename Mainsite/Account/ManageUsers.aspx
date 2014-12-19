@@ -1,14 +1,12 @@
 ﻿<%@ Page Title="" Language="C#"  AutoEventWireup="true" CodeBehind="ManageUsers.aspx.cs" Inherits="Mainsite.Account.ManageUsers" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
+    <link href="~/Content/workarea.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
 <form name="form1" runat="server"><asp:ToolkitScriptManager ID="ToolkitScriptManager" runat="server"></asp:ToolkitScriptManager>
 <asp:ObjectDataSource ID="UserDataSource" runat="server" SelectMethod="CustomGetAllUsers" TypeName="Mainsite.GetAllUsers" />
@@ -17,15 +15,15 @@
         Font-Names="Century Gothic" Font-Size="Small" style="height:100%;">
 <asp:TabPanel runat="server" HeaderText="Usuarios" ID="Tapanel1" Enabled="true" Font-Names="Century Gothic" Font-Size="X-Small">
 <ContentTemplate>
-<asp:Table ID="Usuarios" runat="server" style="display:block; width:100%; border:none; margin:0; padding:0; height:100%;" width="768px" Height="430px" Font-Names="Century Gothic" Font-Size="X-Small" BackColor="#CCCCCC">
-<asp:TableRow>
-<asp:TableCell>
+<asp:Table ID="Usuarios" runat="server" style="display:block; width:100%; border:none; margin:0; padding:0; height:100%;" Height="430px" Font-Names="Century Gothic" Font-Size="X-Small" BackColor="#CCCCCC">
+<asp:TableRow style="width:100%;">
+<asp:TableCell style="width:100%;">
     <asp:GridView ID="UserGrid" runat="server" DataSourceID="UserDataSource" AllowPaging="true" CellPadding="4" ForeColor="#333333" GridLines="None"
-    AllowSorting="true" Width="915px"
+    AllowSorting="true" Width="915px" 
     OnSelectedIndexChanged="UserGrid_IndexChanged">
     <AlternatingRowStyle BackColor="White" />
     <Columns>
-        <asp:CommandField ShowSelectButton="true" ButtonType="Button" />
+        <asp:CommandField ShowSelectButton="true" ButtonType="Button"  ControlStyle-CssClass="btnstyle" ItemStyle-CssClass="btnstyle" />
     </Columns>
     <EditRowStyle BackColor="#7C6F57" />
     <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -51,24 +49,24 @@
         <asp:Button id="hideButton" runat="server" />
     </div>
 
-    <div id="divConfirmDelete" style="display:none; background-color:White; width:200px; height:94px; border: 2px solid black;">
+    <div id="divConfirmDelete" style="display:none; background-color:White; width:400px; height:94px; text-align:center; border: 2px solid black;">
         <p> Esta seguro que desea eliminar este usuario?</p>
-        <div style="width:137px; margin: auto auto auto auto; display:inline">
-            <asp:Button runat="server" Text="Confirm" ID="ConfirmDelete" 
-            OnClick="DeleteUser" Width="63px" style="margin-left: 34px" />
-            <asp:Button runat="server" id="CancelDelete" Text="Cancel" 
-            style="margin-left: 11px" />
+        <div style="width:250px; margin: auto auto auto auto; display:inline">
+            <asp:Button runat="server" Text="Confirmar" ID="ConfirmDelete" 
+            OnClick="DeleteUser" Width="80px" style="margin-left: 34px; font-family:Century Gothic;" CssClass="style1" />
+            <asp:Button runat="server" Width="80px" id="CancelDelete" Text="Cancelar" 
+            style="margin-left: 11px; font-family:Century Gothic;" CssClass="style1" />
         </div>
     </div>
     <asp:Panel ID="DivManagePass" runat="server" BackColor="White" >
 
 
-     <div id="CambioContrasena"  style="width:600px; height:55px; border: 2px solid black;">
+     <div id="CambioContrasena"  style="width:600px; height:150px; font-family:Century Gothic; border: 2px solid black;">
 
         <fieldset class="changePassword">
          <legend>Modificar contraseña</legend>
 
-           <asp:Table ID="Datos" runat="server" Width="412px" Height="40px" Font-Names="Century Gothic" Font-Size="Small" HorizontalAlign="Center">
+           <asp:Table ID="Datos" runat="server" Width="412px" Height="120px" Font-Names="Century Gothic" Font-Size="Small" HorizontalAlign="Center">
           <asp:TableRow HorizontalAlign="Center" VerticalAlign="Middle" Height="5">
               <asp:TableCell>
              
@@ -108,15 +106,15 @@
               </asp:TableCell></asp:TableRow></asp:Table></fieldset></div></asp:Panel><asp:Panel ID="divPopUp" runat="server" BackColor="White">
 
 
-     <div id="popupcontainer" style="width:620px;  border: 2px solid black;">
+     <div id="popupcontainer" style="width:620px; font-family:Century Gothic; border: 2px solid black;">
 
         <fieldset class="changePassword">
           <legend>Administrar usuario de sistema</legend><table style="width:580px; border:0; text-align:center;"><tr>
     <td colspan="4"></td>
   </tr>
   <tr>
-    <td style="height:24;" colspan="3"><asp:Label ID="label5" runat="server" Text="Información del usuario" /></td>
-    <td style="width:90;"><asp:Label ID="label6" runat="server" Text="Roles" /></td>
+    <td style="font-family:Century Gothic; height:24;"  colspan="3"><asp:Label ID="label5" runat="server" Text="Información del usuario" /></td>
+    <td style="font-family:Century Gothic; width:90;"><asp:Label ID="label6" runat="server" Text="Roles" /></td>
   </tr>
   <tr>
     <td class="style1"><asp:Label ID="label7" runat="server" Text="User ID" /></td><td colspan="2"><asp:TextBox runat="server" Enabled="false" ID="UserNameText" /></td><td rowspan="3"> <div id="roleDiv" runat="server"/></td></tr><tr>

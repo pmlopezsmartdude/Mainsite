@@ -14,11 +14,13 @@
             <Nodes>
                 <asp:TreeNode SelectAction="Expand" Text="Administración de usuarios" 
                     Value="Administracion de usuarios" Expanded="False">
-                    <asp:TreeNode Text="Crear usuario" Value="Crear usuario"></asp:TreeNode>
+                    <asp:TreeNode Text="Crear usuario" Value="Crear usuario"
+                    Target="workingarea" NavigateUrl="~/Account/CreateUser.aspx"></asp:TreeNode>
                     <asp:TreeNode Text="Administrar Usuarios" Value="Administrar Usuarios" 
                         Target="workingarea" NavigateUrl="~/Account/ManageUsers.aspx"></asp:TreeNode>
                 </asp:TreeNode>
-                <asp:TreeNode Text="Administración de Roles" Value="Administración de Roles">
+                <asp:TreeNode Text="Administración de Roles" Value="Administración de Roles"
+                        Target="workingarea" NavigateUrl="~/Account/RoleEditor.aspx">
                 </asp:TreeNode>
             </Nodes>
         </asp:TreeView>

@@ -1,7 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Mainsite.SiteMaster" %>
+<script runat="server">
+</script>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html id="htmlroot" runat="server" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta charset="utf-8" />
@@ -24,7 +26,7 @@
         <p class="site-title"><a runat="server" href="~/">
             <img runat="server" src="~/Images/LogoWCTChico.png" alt="" title="WTC Software"/></a></p>
         </div>
-   <div class="clock" style="font-family: LCD">
+   <div class="clock" style="font-family: LCD;" >
    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
    <ContentTemplate>
@@ -37,7 +39,7 @@
            <section id="login" class="loginheader">
                   <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
                     <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
+                        [ <a href="~/MainApp/admusr.aspx" id="HeadLoginStatus" runat="server">Iniciar sesión</a> ]
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                        [ Usuario conectado <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span> ]
@@ -55,7 +57,7 @@
                     </AnonymousTemplate>
                     <LoggedInTemplate>
                     <ul id="topmenu">
-                    <li><a runat="server" href="~/">Inicio</a></li>
+                    <li><a runat="server" href="~/MainApp/admusr.aspx">Inicio</a></li>
                     <li><a id="A1" runat="server" href="~/About.aspx">Acerca de</a></li>
                     </ul>
                     </LoggedInTemplate>
@@ -67,16 +69,10 @@
 
     </header>
   <br />
-    <div class="page">
-        <div class="header1">
- 
-        </div>
-        <div class="main" style="display:block; width:100%; border:none; margin:0; padding:0; height:100%;">
+
+
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
-        </div>
-        <div class="clear">
-        </div>
-    </div>
+
     <div class="footer">
                 <p>&copy; <%: DateTime.Now.Year %> - WTC Consultores Limitada</p>
     </div>
