@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
         <asp:TreeView ID="TreeViewAdmUsr" runat="server" Font-Names="Century Gothic" 
-            Font-Size="X-Small" ShowLines="True" LineImagesFolder="~/TreeLineImages">
+            Font-Size="X-Small" ShowLines="True" LineImagesFolder="~/TreeLineImages" Visible="True">
             <Nodes>
                 <asp:TreeNode SelectAction="Expand" Text="Administración de usuarios" 
                     Value="Administracion de usuarios" Expanded="False">
@@ -24,6 +24,18 @@
                 </asp:TreeNode>
             </Nodes>
         </asp:TreeView>
+        <asp:TreeView ID="TreeViewApps" runat="server" Font-Names="Century Gothic"
+            Font-Size="X-Small" ShowLines="true" LineImagesFolder="~/TreeLineImages" Visible="true">
+            <Nodes>
+            <asp:TreeNode SelectAction="Expand" Text="Menu Principal Aplicaciones"
+                Value="Menu Principal Aplicaciones" Expanded="False">
+                <asp:TreeNode Text="Aplicación 1" Value="Aplicación 1"
+                Target="workingarea"></asp:TreeNode>
+                <asp:TreeNode Text="Aplicación 2" Value="Aplicación 2"
+                Target="workingarea"></asp:TreeNode>
+                </asp:TreeNode>
+            </Nodes>
+            </asp:TreeView>
     </div>
     </form>
 </body>
